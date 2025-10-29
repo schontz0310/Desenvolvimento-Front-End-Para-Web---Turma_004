@@ -1,0 +1,23 @@
+# Arquivos e diretórios locais (não devem ir para o repositório)
+local/
+
+# Arquivos do sistema operacional
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Arquivos de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Arquivos temporários
+*.log
+*.tmp
+*.temp
