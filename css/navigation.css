@@ -138,7 +138,12 @@
     color: var(--color-primary);
 }
 
-/* ===== MENU HAMBÚRGUER (Mobile) ===== */
+/* ===== MENU HAMBÚRGUER (Mobile) - CSS PURO ===== */
+
+/* Esconde o checkbox */
+.menu-checkbox {
+    display: none;
+}
 
 .menu-toggle {
     display: none;
@@ -162,16 +167,16 @@
     transform-origin: center;
 }
 
-/* Animação do hambúrguer para X */
-.menu-toggle.active span:nth-child(1) {
+/* Animação do hambúrguer para X quando checkbox está checked */
+.menu-checkbox:checked ~ .header-container .menu-toggle span:nth-child(1) {
     transform: translateY(10.5px) rotate(45deg);
 }
 
-.menu-toggle.active span:nth-child(2) {
+.menu-checkbox:checked ~ .header-container .menu-toggle span:nth-child(2) {
     opacity: 0;
 }
 
-.menu-toggle.active span:nth-child(3) {
+.menu-checkbox:checked ~ .header-container .menu-toggle span:nth-child(3) {
     transform: translateY(-10.5px) rotate(-45deg);
 }
 
@@ -190,37 +195,12 @@
     transition: left var(--transition-base);
     z-index: var(--z-index-modal);
     overflow-y: auto;
+    padding-top: 80px;
 }
 
-.mobile-menu.active {
+/* Mostra o menu quando checkbox está checked */
+.menu-checkbox:checked ~ .mobile-menu {
     left: 0;
-}
-
-.mobile-menu-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--spacing-4);
-    border-bottom: 1px solid var(--color-gray-300);
-}
-
-.mobile-menu-close {
-    background: none;
-    border: none;
-    font-size: var(--font-size-2xl);
-    color: var(--color-primary);
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: var(--radius-md);
-    transition: background-color var(--transition-fast);
-}
-
-.mobile-menu-close:hover {
-    background-color: var(--color-gray-100);
 }
 
 .mobile-nav-menu {
@@ -248,32 +228,6 @@
     color: var(--color-white);
 }
 
-/* Submenu Mobile */
-.mobile-dropdown-menu {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height var(--transition-base);
-    padding-left: var(--spacing-4);
-}
-
-.mobile-dropdown-menu.active {
-    max-height: 500px;
-}
-
-.mobile-dropdown-item {
-    display: block;
-    padding: var(--spacing-3) var(--spacing-4);
-    color: var(--text-secondary);
-    text-decoration: none;
-    border-radius: var(--radius-sm);
-    transition: all var(--transition-fast);
-}
-
-.mobile-dropdown-item:hover {
-    background-color: var(--color-gray-100);
-    color: var(--color-primary);
-}
-
 /* ===== OVERLAY (Backdrop) ===== */
 
 .menu-overlay {
@@ -287,9 +241,11 @@
     z-index: var(--z-index-modal-backdrop);
     opacity: 0;
     transition: opacity var(--transition-base);
+    cursor: pointer;
 }
 
-.menu-overlay.active {
+/* Mostra o overlay quando checkbox está checked */
+.menu-checkbox:checked ~ .menu-overlay {
     display: block;
     opacity: 1;
 }
@@ -328,36 +284,3 @@
     color: var(--text-secondary);
 }
 
-/* ===== SCROLL TO TOP ===== */
-
-.scroll-to-top {
-    position: fixed;
-    bottom: var(--spacing-6);
-    right: var(--spacing-6);
-    width: 50px;
-    height: 50px;
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: var(--font-size-xl);
-    box-shadow: var(--shadow-lg);
-    opacity: 0;
-    visibility: hidden;
-    transition: all var(--transition-base);
-    z-index: var(--z-index-fixed);
-}
-
-.scroll-to-top.visible {
-    opacity: 1;
-    visibility: visible;
-}
-
-.scroll-to-top:hover {
-    background-color: var(--color-secondary);
-    transform: translateY(-5px);
-}

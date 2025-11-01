@@ -6,130 +6,185 @@
     <meta name="description" content="Conheça os projetos sociais da ONG Esperança Solidária, seja voluntário ou faça uma doação para transformar vidas">
     <meta name="keywords" content="projetos sociais, voluntariado, doações, ação social, ONG">
     <title>Projetos e Doações - ONG Esperança Solidária</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <header>
-        <div>
-            <img src="img/logo.png" alt="Logo ONG Esperança Solidária" style="max-width: 150px; height: auto;">
-            <h1>ONG Esperança Solidária</h1>
+<body class="site-layout">
+    <header class="site-header">
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        
+        <div class="header-container">
+            <a href="index.html" class="site-logo">
+                <img src="img/logo.png" alt="Logo ONG Esperança Solidária">
+                <div class="header-brand-name">
+                    <span class="header-brand-title">ONG Esperança Solidária</span>
+                    <span class="header-brand-subtitle">Transformando vidas</span>
+                </div>
+            </a>
+            
+            <label for="menu-toggle" class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="projetos.html" class="nav-link active">Projetos</a></li>
+                    <li class="nav-item"><a href="cadastro.html" class="nav-link">Cadastre-se</a></li>
+                </ul>
+            </nav>
         </div>
         
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="cadastro.html">Cadastre-se</a></li>
+        <!-- Menu Mobile -->
+        <nav class="mobile-menu">
+            <ul class="mobile-nav-menu">
+                <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link">Início</a></li>
+                <li class="mobile-nav-item"><a href="projetos.html" class="mobile-nav-link active">Projetos</a></li>
+                <li class="mobile-nav-item"><a href="cadastro.html" class="mobile-nav-link">Cadastre-se</a></li>
             </ul>
         </nav>
+        
+        <label for="menu-toggle" class="menu-overlay"></label>
     </header>
 
-    <main>
+    <main class="site-main">
         <!-- Hero Projetos -->
-        <section>
-            <img src="img/projetos-banner.jpg" alt="Voluntários em ação nos projetos da ONG" style="max-width: 100%; height: auto; display: block;">
-            <h2>Nossos Projetos Transformam Vidas</h2>
-            <p>Conheça as iniciativas que levam educação, cultura e oportunidades para milhares de pessoas em situação de vulnerabilidade social.</p>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="hero-title">Nossos Projetos Transformam Vidas</h2>
+                    <p class="hero-description">Conheça as iniciativas que levam educação, cultura e oportunidades para milhares de pessoas em situação de vulnerabilidade social.</p>
+                </div>
+            </div>
         </section>
 
         <!-- Projetos Ativos -->
         <section>
-            <h2>Projetos Sociais Ativos</h2>
-            <p>Desenvolvemos projetos que atendem diferentes necessidades das comunidades, sempre com foco em transformação social sustentável.</p>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Projetos Sociais Ativos</h2>
+                    <p class="section-subtitle">Desenvolvemos projetos que atendem diferentes necessidades das comunidades, sempre com foco em transformação social sustentável.</p>
+                </div>
 
             <!-- Projeto 1: Educação -->
-            <article>
-                <img src="img/projeto-educacao.jpg" alt="Crianças participando do projeto de reforço escolar" style="max-width: 600px; height: auto;">
-                <h3>Futuro Brilhante - Reforço Escolar</h3>
-                <p><strong>Categoria:</strong> Educação</p>
-                <p><strong>Público-alvo:</strong> Crianças e adolescentes de 6 a 15 anos</p>
-                <p><strong>Objetivo:</strong> Melhorar o desempenho escolar através de reforço em português e matemática, atividades lúdicas e acompanhamento pedagógico personalizado.</p>
-                <p><strong>Impacto:</strong> Mais de 300 crianças atendidas mensalmente, com melhoria de 40% no rendimento escolar.</p>
-                <p><strong>Local:</strong> 5 comunidades da região metropolitana</p>
-                <p><strong>Horário:</strong> Segunda a sexta, 14h às 17h</p>
-                <a href="#voluntariado">Seja Voluntário neste Projeto</a>
-                <a href="#doacoes">Apoie este Projeto</a>
-            </article>
+            <div class="card">
+                <img src="img/projeto-educacao.jpg" alt="Crianças participando do projeto de reforço escolar" class="card-image">
+                <div class="card-body">
+                    <h3 class="card-title">Futuro Brilhante - Reforço Escolar <span class="badge badge-primary">Educação</span></h3>
+                    <p><strong>Público-alvo:</strong> Crianças e adolescentes de 6 a 15 anos</p>
+                    <p><strong>Objetivo:</strong> Melhorar o desempenho escolar através de reforço em português e matemática, atividades lúdicas e acompanhamento pedagógico personalizado.</p>
+                    <p><strong>Impacto:</strong> Mais de 300 crianças atendidas mensalmente, com melhoria de 40% no rendimento escolar.</p>
+                    <p><strong>Local:</strong> 5 comunidades da região metropolitana</p>
+                    <p><strong>Horário:</strong> Segunda a sexta, 14h às 17h</p>
+                    <div class="flex gap-4 mt-4">
+                        <a href="#voluntariado" class="btn btn-primary">Seja Voluntário</a>
+                        <a href="#doacoes" class="btn btn-secondary">Apoie este Projeto</a>
+                    </div>
+                </div>
+            </div>
 
-            <article>
-                <h3>Outros Projetos</h3>
-                <ul>
-                    <li><strong>Novos Caminhos:</strong> Capacitação Profissional para jovens e adultos</li>
-                    <li><strong>Arte e Vida:</strong> Oficinas Culturais de música, dança e teatro</li>
-                    <li><strong>Mãos Solidárias:</strong> Assistência Social com distribuição de cestas básicas</li>
-                    <li><strong>Viver Bem:</strong> Atividades para a Terceira Idade</li>
-                </ul>
-                <p>Conheça mais sobre todos os nossos projetos entrando em contato conosco!</p>
-            </article>
+            <div class="card mt-6">
+                <div class="card-body">
+                    <h3 class="card-title">Outros Projetos</h3>
+                    <ul>
+                        <li><strong>Novos Caminhos:</strong> Capacitação Profissional para jovens e adultos</li>
+                        <li><strong>Arte e Vida:</strong> Oficinas Culturais de música, dança e teatro</li>
+                        <li><strong>Mãos Solidárias:</strong> Assistência Social com distribuição de cestas básicas</li>
+                        <li><strong>Viver Bem:</strong> Atividades para a Terceira Idade</li>
+                    </ul>
+                    <p>Conheça mais sobre todos os nossos projetos entrando em contato conosco!</p>
+                </div>
+            </div>
+            </div>
         </section>
 
 
         <!-- Voluntariado -->
         <section id="voluntariado">
-            <h2>Oportunidades de Voluntariado</h2>
-            <img src="img/voluntarios-banner.jpg" alt="Grupo de voluntários sorrindo" style="max-width: 800px; height: auto;">
-            <p>Faça parte da nossa equipe de voluntários e contribua diretamente para a transformação de vidas. Temos oportunidades para diferentes perfis e disponibilidades.</p>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Oportunidades de Voluntariado</h2>
+                    <p class="section-subtitle">Faça parte da nossa equipe de voluntários e contribua diretamente para a transformação de vidas. Temos oportunidades para diferentes perfis e disponibilidades.</p>
+                </div>
+                
+                <div class="cards-grid">
 
-            <article>
-                <h3>💡 Professor(a) Voluntário(a)</h3>
-                <p><strong>Áreas:</strong> Português, Matemática, Inglês, Informática</p>
-                <p><strong>Compromisso:</strong> 4 horas semanais</p>
-                <p><strong>Requisitos:</strong> Formação ou experiência na área</p>
-                <p><strong>Vagas:</strong> 10 vagas abertas</p>
-                <a href="cadastro.html">Candidatar-se</a>
-            </article>
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">💡 Professor(a) Voluntário(a)</h3>
+                    <p><strong>Áreas:</strong> Português, Matemática, Inglês, Informática</p>
+                    <p><strong>Compromisso:</strong> 4 horas semanais</p>
+                    <p><strong>Requisitos:</strong> Formação ou experiência na área</p>
+                    <p><span class="badge badge-success">10 vagas abertas</span></p>
+                    <a href="cadastro.html" class="btn btn-primary btn-block">Candidatar-se</a>
+                </div>
+            </div>
 
-            <article>
-                <h3>🎨 Oficineiro(a) Cultural</h3>
-                <p><strong>Áreas:</strong> Música, Dança, Teatro, Artes Plásticas, Artesanato</p>
-                <p><strong>Compromisso:</strong> 3 horas semanais</p>
-                <p><strong>Requisitos:</strong> Experiência prática na modalidade</p>
-                <p><strong>Vagas:</strong> 8 vagas abertas</p>
-                <a href="cadastro.html">Candidatar-se</a>
-            </article>
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">🎨 Oficineiro(a) Cultural</h3>
+                    <p><strong>Áreas:</strong> Música, Dança, Teatro, Artes Plásticas, Artesanato</p>
+                    <p><strong>Compromisso:</strong> 3 horas semanais</p>
+                    <p><strong>Requisitos:</strong> Experiência prática na modalidade</p>
+                    <p><span class="badge badge-success">8 vagas abertas</span></p>
+                    <a href="cadastro.html" class="btn btn-primary btn-block">Candidatar-se</a>
+                </div>
+            </div>
 
-            <article>
-                <h3>👥 Apoio Administrativo</h3>
-                <p><strong>Atividades:</strong> Atendimento, organização de eventos, comunicação</p>
-                <p><strong>Compromisso:</strong> 6 horas semanais</p>
-                <p><strong>Requisitos:</strong> Boa comunicação e organização</p>
-                <p><strong>Vagas:</strong> 5 vagas abertas</p>
-                <a href="cadastro.html">Candidatar-se</a>
-            </article>
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">👥 Apoio Administrativo</h3>
+                    <p><strong>Atividades:</strong> Atendimento, organização de eventos, comunicação</p>
+                    <p><strong>Compromisso:</strong> 6 horas semanais</p>
+                    <p><strong>Requisitos:</strong> Boa comunicação e organização</p>
+                    <p><span class="badge badge-success">5 vagas abertas</span></p>
+                    <a href="cadastro.html" class="btn btn-primary btn-block">Candidatar-se</a>
+                </div>
+            </div>
 
-            <article>
-                <h3>🏥 Profissionais de Saúde</h3>
-                <p><strong>Áreas:</strong> Psicologia, Fisioterapia, Nutrição, Enfermagem</p>
-                <p><strong>Compromisso:</strong> 4 horas quinzenais</p>
-                <p><strong>Requisitos:</strong> Formação na área e registro profissional</p>
-                <p><strong>Vagas:</strong> 6 vagas abertas</p>
-                <a href="cadastro.html">Candidatar-se</a>
-            </article>
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">🏥 Profissionais de Saúde</h3>
+                    <p><strong>Áreas:</strong> Psicologia, Fisioterapia, Nutrição, Enfermagem</p>
+                    <p><strong>Compromisso:</strong> 4 horas quinzenais</p>
+                    <p><strong>Requisitos:</strong> Formação na área e registro profissional</p>
+                    <p><span class="badge badge-success">6 vagas abertas</span></p>
+                    <a href="cadastro.html" class="btn btn-primary btn-block">Candidatar-se</a>
+                </div>
+            </div>
 
-            <article>
-                <h3>📢 Comunicação e Marketing</h3>
-                <p><strong>Atividades:</strong> Gestão de redes sociais, criação de conteúdo, fotografia</p>
-                <p><strong>Compromisso:</strong> Flexível (home office)</p>
-                <p><strong>Requisitos:</strong> Experiência em comunicação digital</p>
-                <p><strong>Vagas:</strong> 4 vagas abertas</p>
-                <a href="cadastro.html">Candidatar-se</a>
-            </article>
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">📢 Comunicação e Marketing</h3>
+                    <p><strong>Atividades:</strong> Gestão de redes sociais, criação de conteúdo, fotografia</p>
+                    <p><strong>Compromisso:</strong> Flexível (home office)</p>
+                    <p><strong>Requisitos:</strong> Experiência em comunicação digital</p>
+                    <p><span class="badge badge-success">4 vagas abertas</span></p>
+                    <a href="cadastro.html" class="btn btn-primary btn-block">Candidatar-se</a>
+                </div>
+            </div>
+                </div>
 
-            <article>
-                <h3>Depoimento de Voluntário</h3>
-                <blockquote>
-                    <p>"Ser voluntário mudou minha perspectiva de vida. A cada aula que dou, aprendo muito mais do que ensino. Ver o progresso das crianças é minha maior recompensa!"</p>
-                    <footer>
-                        <cite>— Ana Paula Rodrigues, Professora Voluntária há 2 anos</cite>
-                    </footer>
-                </blockquote>
-            </article>
+                <div class="testimonial mt-8">
+                    <p class="testimonial-text">"Ser voluntário mudou minha perspectiva de vida. A cada aula que dou, aprendo muito mais do que ensino. Ver o progresso das crianças é minha maior recompensa!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Ana Paula Rodrigues</div>
+                            <div class="testimonial-role">Professora Voluntária há 2 anos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Sistema de Doações -->
         <section id="doacoes">
-            <h2>Como Doar</h2>
-            <img src="img/doacoes-banner.jpg" alt="Mãos unidas simbolizando doação" style="max-width: 800px; height: auto;">
-            <p>Sua contribuição faz toda a diferença! Todas as doações são aplicadas diretamente em nossos projetos sociais e acompanhadas com total transparência.</p>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Como Doar</h2>
+                    <p class="section-subtitle">Sua contribuição faz toda a diferença! Todas as doações são aplicadas diretamente em nossos projetos sociais e acompanhadas com total transparência.</p>
+                </div>
 
             <article>
                 <h3>💰 Doação Financeira</h3>
@@ -219,10 +274,16 @@
             </article>
         </section>
 
+            </div>
+        </section>
+        
         <!-- Prestação de Contas -->
         <section>
-            <h2>Transparência nas Doações</h2>
-            <p>Comprometidos com a transparência, publicamos mensalmente relatórios detalhados sobre a aplicação de recursos.</p>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Transparência nas Doações</h2>
+                    <p class="section-subtitle">Comprometidos com a transparência, publicamos mensalmente relatórios detalhados sobre a aplicação de recursos.</p>
+                </div>
 
             <article>
                 <h3>Aplicação de Recursos - Último Ano</h3>
@@ -275,48 +336,58 @@
             <article>
                 <h3>Relatórios e Documentos</h3>
                 <ul>
-                    <li><a href="#" download>Relatório Financeiro - Janeiro a Março 2024 (PDF)</a></li>
-                    <li><a href="#" download>Relatório Financeiro - Abril a Junho 2024 (PDF)</a></li>
-                    <li><a href="#" download>Relatório de Atividades - 1º Semestre 2024 (PDF)</a></li>
-                    <li><a href="#" download>Balanço Anual 2023 (PDF)</a></li>
+                    <li><a href="#" download class="btn btn-outline">Relatório Financeiro - Janeiro a Março 2024 (PDF)</a></li>
+                    <li><a href="#" download class="btn btn-outline">Relatório Financeiro - Abril a Junho 2024 (PDF)</a></li>
+                    <li><a href="#" download class="btn btn-outline">Relatório de Atividades - 1º Semestre 2024 (PDF)</a></li>
+                    <li><a href="#" download class="btn btn-outline">Balanço Anual 2023 (PDF)</a></li>
                 </ul>
             </article>
+            </div>
         </section>
 
         <!-- Call to Action -->
-        <section>
-            <h2>Faça Parte Desta Transformação</h2>
-            <p>Seja voluntário ou faça uma doação. Cada ação conta na construção de um futuro melhor para milhares de pessoas.</p>
-            <a href="cadastro.html">Cadastre-se como Voluntário</a>
-            <a href="#doacoes">Fazer uma Doação</a>
-            <a href="index.html#contato">Entre em Contato</a>
+        <section class="cta-section">
+            <div class="container text-center">
+                <h2 class="cta-title">Faça Parte Desta Transformação</h2>
+                <p class="cta-description">Seja voluntário ou faça uma doação. Cada ação conta na construção de um futuro melhor para milhares de pessoas.</p>
+                <div class="flex justify-center gap-4">
+                    <a href="cadastro.html" class="btn btn-primary btn-lg">Cadastre-se como Voluntário</a>
+                    <a href="#doacoes" class="btn btn-outline btn-lg">Fazer uma Doação</a>
+                    <a href="index.html#contato" class="btn btn-outline btn-lg">Entre em Contato</a>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <section>
-            <h3>ONG Esperança Solidária</h3>
-            <p>CNPJ: 12.345.678/0001-90</p>
-            <p>Certificado de Utilidade Pública Municipal nº 1234/2010</p>
-            <p>Certificado de Utilidade Pública Estadual nº 5678/2011</p>
-        </section>
-        
-        <section>
-            <h3>Links Rápidos</h3>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="cadastro.html">Cadastre-se</a></li>
-            </ul>
-        </section>
-        
-        <section>
-            <h3>Contato</h3>
-            <p><a href="mailto:contato@esperancasolidaria.org.br">contato@esperancasolidaria.org.br</a></p>
-            <p><a href="tel:+551134567890">(11) 3456-7890</a></p>
-        </section>
-        
-        <p>&copy; 2024 ONG Esperança Solidária. Todos os direitos reservados.</p>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ONG Esperança Solidária</h3>
+                    <p>CNPJ: 12.345.678/0001-90</p>
+                    <p>Certificado de Utilidade Pública Municipal nº 1234/2010</p>
+                    <p>Certificado de Utilidade Pública Estadual nº 5678/2011</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                        <li><a href="cadastro.html">Cadastre-se</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p><a href="mailto:contato@esperancasolidaria.org.br">contato@esperancasolidaria.org.br</a></p>
+                    <p><a href="tel:+551134567890">(11) 3456-7890</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ONG Esperança Solidária. Todos os direitos reservados.</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
