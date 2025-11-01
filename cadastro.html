@@ -306,8 +306,8 @@
                 <fieldset>
                     <legend>Formação e Experiência</legend>
                     
-                    <p>
-                        <label for="escolaridade">Escolaridade: *</label><br>
+                    <div class="form-group">
+                        <label for="escolaridade" class="required">Escolaridade:</label>
                         <select id="escolaridade" name="escolaridade" required aria-required="true">
                             <option value="">Selecione...</option>
                             <option value="fundamental-incompleto">Ensino Fundamental Incompleto</option>
@@ -320,29 +320,27 @@
                             <option value="mestrado">Mestrado</option>
                             <option value="doutorado">Doutorado</option>
                         </select>
-                    </p>
+                    </div>
                     
-                    <p>
-                        <label for="profissao">Profissão/Área de Atuação:</label><br>
+                    <div class="form-group">
+                        <label for="profissao">Profissão/Área de Atuação:</label>
                         <input 
                             type="text" 
                             id="profissao" 
                             name="profissao" 
                             placeholder="Sua profissão ou área"
-                            maxlength="100"
-                            size="50">
-                    </p>
+                            maxlength="100">
+                    </div>
                     
-                    <p>
-                        <label for="habilidades">Habilidades e Conhecimentos:</label><br>
+                    <div class="form-group">
+                        <label for="habilidades">Habilidades e Conhecimentos:</label>
                         <textarea 
                             id="habilidades" 
                             name="habilidades" 
                             rows="5"
-                            cols="60"
                             placeholder="Descreva suas principais habilidades, conhecimentos e experiências relevantes..."
                             maxlength="500"></textarea>
-                    </p>
+                    </div>
                 </fieldset>
 
                 <hr>
