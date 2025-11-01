@@ -420,35 +420,45 @@
                     <fieldset>
                         <legend>Período Preferencial: * (escolha os períodos disponíveis)</legend>
                         
-                        <p>
+                        <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 12px;">
                             <input 
                                 type="checkbox" 
                                 id="periodo-manha" 
                                 name="periodos[]" 
-                                value="manha">
-                            <label for="periodo-manha">Manhã (8h às 12h)</label><br>
-                            
+                                value="manha"
+                                style="margin-top: 4px; flex-shrink: 0;">
+                            <label for="periodo-manha" style="cursor: pointer;">Manhã (8h às 12h)</label>
+                        </div>
+                        
+                        <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 12px;">
                             <input 
                                 type="checkbox" 
                                 id="periodo-tarde" 
                                 name="periodos[]" 
-                                value="tarde">
-                            <label for="periodo-tarde">Tarde (13h às 18h)</label><br>
-                            
+                                value="tarde"
+                                style="margin-top: 4px; flex-shrink: 0;">
+                            <label for="periodo-tarde" style="cursor: pointer;">Tarde (13h às 18h)</label>
+                        </div>
+                        
+                        <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 12px;">
                             <input 
                                 type="checkbox" 
                                 id="periodo-noite" 
                                 name="periodos[]" 
-                                value="noite">
-                            <label for="periodo-noite">Noite (18h às 21h)</label><br>
-                            
+                                value="noite"
+                                style="margin-top: 4px; flex-shrink: 0;">
+                            <label for="periodo-noite" style="cursor: pointer;">Noite (18h às 21h)</label>
+                        </div>
+                        
+                        <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 12px;">
                             <input 
                                 type="checkbox" 
                                 id="periodo-fds" 
                                 name="periodos[]" 
-                                value="fins-de-semana">
-                            <label for="periodo-fds">Finais de Semana</label>
-                        </p>
+                                value="fins-de-semana"
+                                style="margin-top: 4px; flex-shrink: 0;">
+                            <label for="periodo-fds" style="cursor: pointer;">Finais de Semana</label>
+                        </div>
                     </fieldset>
                     
                     <fieldset>
