@@ -305,11 +305,279 @@ chore: build/config
 
 ---
 
+## 📅 Histórico de Desenvolvimento (Cronológico)
+
+### 🔹 **Experiência Prática 01 - HTML Semântico**
+**Branch:** `Experiencia-pratica-01`  
+**Período:** Outubro 2024  
+**Versão:** v1.0.0
+
+#### **Requisitos Implementados:**
+
+**Estrutura HTML5:**
+- ✅ Tags semânticas (`<header>`, `<nav>`, `<main>`, `<footer>`, `<article>`, `<section>`)
+- ✅ Hierarquia de headings (h1-h6)
+- ✅ DOCTYPE e lang="pt-BR"
+
+**Páginas Criadas:**
+- ✅ `index.html` - Home com hero, quem somos, impacto, áreas, depoimentos, contato
+- ✅ `projetos.html` - Projetos sociais, voluntariado, doações
+- ✅ `cadastro.html` - Formulário completo de cadastro
+
+**Formulário (cadastro.html):**
+- ✅ 10+ campos (nome, email, telefone, CPF, endereço, etc)
+- ✅ Inputs variados (text, email, tel, select, textarea, radio, checkbox)
+- ✅ Labels associados corretamente
+- ✅ Atributos required, placeholder, pattern
+
+**Multimídia e Links:**
+- ✅ Imagens com alt text
+- ✅ Links internos entre páginas
+- ✅ Links externos (redes sociais)
+- ✅ Botões e CTAs
+
+**SEO:**
+- ✅ Meta tags (description, keywords)
+- ✅ Title único por página
+- ✅ Estrutura otimizada para buscadores
+
+---
+
+### 🔹 **Experiência Prática 02 - CSS Avançado**
+**Branch:** `Experiencia-pratica-02`  
+**Período:** Outubro 2024  
+**Versão:** v2.0.0
+
+#### **Requisitos Implementados:**
+
+**Design System:**
+- ✅ CSS Variables (20+ cores)
+- ✅ Paleta de cores (primária, secundária, acento, neutras)
+- ✅ 10 tamanhos de fonte (0.75rem a 3.5rem)
+- ✅ Sistema de espaçamento modular (11 níveis)
+- ✅ Sombras e bordas padronizadas
+
+**Layouts Responsivos:**
+- ✅ CSS Grid (sistema 12 colunas)
+- ✅ Flexbox para componentes
+- ✅ 7 breakpoints (320px, 576px, 768px, 992px, 1200px, 1400px, print)
+- ✅ Mobile-first approach
+- ✅ Imagens responsivas
+
+**Navegação:**
+- ✅ Menu principal desktop com dropdown
+- ✅ Menu hambúrguer mobile **100% CSS puro** (checkbox hack)
+- ✅ Header sticky
+- ✅ Overlay/backdrop
+- ✅ Animações suaves
+
+**Componentes UI:**
+- ✅ Cards (padrão, horizontal, com imagem)
+- ✅ Botões (6 variantes: primary, secondary, outline, danger, success, info)
+- ✅ Badges (7 cores)
+- ✅ Alerts (success, danger, warning, info)
+- ✅ Toasts para notificações
+- ✅ Modals
+- ✅ Progress bars
+- ✅ Stats cards
+- ✅ Testimonials
+
+**Formulários:**
+- ✅ Inputs estilizados
+- ✅ Selects customizados
+- ✅ Checkboxes e radios personalizados
+- ✅ Validação visual (estados de erro)
+- ✅ Form groups organizados
+
+**Arquivos CSS Modulares:**
+- ✅ `variables.css` - Design tokens
+- ✅ `base.css` - Reset e tipografia
+- ✅ `layout.css` - Grid e utilitários
+- ✅ `navigation.css` - Menu e navegação
+- ✅ `components.css` - Componentes reutilizáveis
+- ✅ `forms.css` - Estilos de formulários
+- ✅ `responsive.css` - Media queries
+- ✅ `styles.css` - Arquivo principal (importa todos)
+
+**Transições e Animações:**
+- ✅ Hover effects em links e botões
+- ✅ Transições suaves (0.3s)
+- ✅ Transform em cards
+- ✅ Fade in/out em modais
+
+---
+
+### 🔹 **Experiência Prática 03 - JavaScript Avançado**
+**Branch:** `Experiencia-pratica-03`  
+**Período:** Novembro 2024  
+**Versão:** v3.0.0
+
+#### **Requisitos Implementados:**
+
+**REQUISITO OBRIGATÓRIO - Validação de Formulários:**
+- ✅ **Sistema de verificação de consistência de dados**
+- ✅ **Avisos visuais ao usuário sobre erros**
+
+**Validação em Tempo Real:**
+- ✅ Validação ao sair do campo (evento blur)
+- ✅ Validação enquanto digita (evento input com debounce)
+- ✅ Remove erro automaticamente ao corrigir
+- ✅ Validação no submit do formulário
+
+**Tipos de Validação:**
+- ✅ Campos obrigatórios (required)
+- ✅ E-mail (regex: `/^[^\s@]+@[^\s@]+\.[^\s@]+$/`)
+- ✅ **CPF com algoritmo completo** (dígitos verificadores)
+- ✅ Telefone (formato: `(XX) XXXXX-XXXX`)
+- ✅ CEP (formato: `XXXXX-XXX`)
+- ✅ Tamanho mínimo/máximo (minlength/maxlength)
+- ✅ Pattern customizado (regex)
+
+**Máscaras Automáticas:**
+- ✅ CPF: formata para `000.000.000-00` enquanto digita
+- ✅ Telefone: formata para `(00) 00000-0000`
+- ✅ CEP: formata para `00000-000`
+
+**Feedback Visual:**
+- ✅ Borda vermelha em campos com erro
+- ✅ Mensagem de erro abaixo do campo
+- ✅ Toast de notificação no topo da página
+- ✅ Scroll automático para o primeiro erro
+- ✅ Foco no campo inválido
+
+**Toasts de Notificação:**
+- ✅ Toast de erro (validação falhou)
+- ✅ Toast de sucesso (formulário enviado)
+- ✅ Toast de informação (enviando...)
+- ✅ Auto-fechamento após 5 segundos
+- ✅ Botão de fechar manual
+
+**Manipulação do DOM:**
+- ✅ `querySelector` / `getElementById`
+- ✅ `addEventListener` (DOMContentLoaded, submit, blur, input)
+- ✅ Criação dinâmica de elementos (toasts)
+- ✅ Modificação de classes CSS
+- ✅ Estilos inline dinâmicos
+
+**Arquivo JavaScript:**
+- ✅ `js/script.js` (~250 linhas)
+- ✅ Código modular com funções específicas
+- ✅ Comentários explicativos
+- ✅ Zero dependências externas
+
+**Funções Implementadas:**
+```javascript
+validarCampo(campo)           // Valida campo individual
+validarEmail(email)           // Valida formato de e-mail
+validarCPF(cpf)              // Validação algorítmica de CPF
+mostrarErro(campo, mensagem) // Exibe erro no campo
+removerErro(campo)           // Remove erro do campo
+limparTodosErros()           // Limpa todos os erros
+mostrarToast(tipo, mensagem) // Exibe toast de notificação
+setupMascaras()              // Configura máscaras automáticas
+```
+
+---
+
+### 🔹 **Experiência Prática 04 - Acessibilidade e Otimização**
+**Branch:** `Experiencia-pratica-04`  
+**Período:** Novembro 2024  
+**Versão:** v4.0.0
+
+#### **Requisitos Implementados:**
+
+**WCAG 2.1 Nível AA - Navegação por Teclado:**
+- ✅ Tab/Shift+Tab para navegação entre elementos
+- ✅ Enter/Space para ativar botões e links
+- ✅ Escape para fechar modais e menus
+- ✅ Setas para navegar em menus dropdown
+- ✅ **Skip links** (`Alt+1` - pular para conteúdo principal)
+- ✅ Focus visível em todos os elementos interativos
+
+**WCAG 2.1 - Estrutura Semântica:**
+- ✅ Landmarks ARIA: `role="banner"`, `role="main"`, `role="navigation"`, `role="contentinfo"`
+- ✅ ARIA labels: `aria-label="Menu principal"`, `aria-label="Menu mobile"`
+- ✅ Headings hierárquicos mantidos
+- ✅ Labels corretos em formulários
+- ✅ Alt text em todas as imagens
+
+**WCAG 2.1 - Contraste de Cores:**
+- ✅ Texto normal: mínimo 4.5:1
+- ✅ Texto grande: mínimo 3:1
+- ✅ Componentes UI: mínimo 3:1
+- ✅ Função `checkContrast()` para verificação
+
+**WCAG 2.1 - Leitores de Tela:**
+- ✅ ARIA live regions para anúncios dinâmicos
+- ✅ Classe `.sr-only` para conteúdo apenas para leitores
+- ✅ Anúncios de mudança de tema
+- ✅ Função `announce()` para notificações
+
+**Modo Escuro e Alto Contraste:**
+- ✅ **Modo claro** (padrão) - `Alt+L`
+- ✅ **Modo escuro** - `Alt+D` com cores otimizadas
+- ✅ **Alto contraste** - `Alt+H` (preto/branco/amarelo/ciano)
+- ✅ Detecção automática via `prefers-color-scheme: dark`
+- ✅ Persistência em localStorage
+- ✅ Botões de toggle fixos (☀️ 🌙 ⚫)
+
+**Preferências do Usuário:**
+- ✅ `prefers-reduced-motion` (animações reduzidas)
+- ✅ `prefers-color-scheme` (tema do sistema)
+- ✅ Respeito às configurações do navegador
+
+**Focus Trap:**
+- ✅ Foco mantido dentro de modais abertos
+- ✅ Loop entre primeiro e último elemento focável
+
+**Atalhos de Teclado:**
+```
+Alt+1  → Skip to main content
+Alt+L  → Tema claro
+Alt+D  → Tema escuro  
+Alt+H  → Alto contraste
+Tab    → Próximo elemento
+Esc    → Fechar modal/menu
+```
+
+**Arquivos de Acessibilidade:**
+- ✅ `css/accessibility.css` (~300 linhas)
+- ✅ `js/accessibility.js` (~400 linhas)
+
+**Classes de Acessibilidade:**
+```css
+.skip-link          // Link para pular navegação
+.sr-only            // Apenas leitores de tela
+[data-theme]        // Temas (light, dark, high-contrast)
+.theme-toggle       // Botões de tema
+[aria-live]         // Regiões dinâmicas
+```
+
+**Otimização:**
+- ✅ Código já otimizado (~90 KB total)
+- ✅ CSS modular e reutilizável
+- ✅ JavaScript sem dependências
+- ✅ Guia de minificação documentado
+- ✅ `docs/OTIMIZACAO.md` com ferramentas recomendadas
+
+**GitFlow e Versionamento:**
+- ✅ Commits semânticos (feat, fix, docs, style, refactor)
+- ✅ Histórico organizado
+- ✅ 4 branches por experiência prática
+- ✅ README profissional completo
+
+**Documentação Completa:**
+- ✅ `README.md` - Documentação principal (este arquivo)
+- ✅ `docs/README.md` - Documentação técnica detalhada
+- ✅ `docs/OTIMIZACAO.md` - Guia de otimização
+- ✅ `EXPERIENCIA-04-PLANEJAMENTO.md` - Planejamento da Exp. 04
+
+---
+
 ## 📚 Documentação Adicional
 
 - **[docs/README.md](docs/README.md)** - Documentação técnica completa
 - **[docs/OTIMIZACAO.md](docs/OTIMIZACAO.md)** - Guia de otimização
-- **[README-EXPERIENCIA-03.md](README-EXPERIENCIA-03.md)** - Exp. 03 detalhada
 - **[EXPERIENCIA-04-PLANEJAMENTO.md](EXPERIENCIA-04-PLANEJAMENTO.md)** - Planejamento Exp. 04
 
 ---
