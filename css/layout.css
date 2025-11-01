@@ -9,11 +9,19 @@
     max-width: var(--container-max-width);
     margin: 0 auto;
     padding: 0 var(--spacing-4);
+    overflow-x: hidden;
 }
 
 .container-fluid {
     width: 100%;
     padding: 0 var(--spacing-4);
+    overflow-x: hidden;
+}
+
+/* Previne overflow em todos os elementos */
+section, header, footer, main {
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 /* ===== SISTEMA DE GRID 12 COLUNAS ===== */

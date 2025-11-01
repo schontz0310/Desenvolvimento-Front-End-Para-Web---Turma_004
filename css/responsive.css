@@ -2,6 +2,29 @@
    MEDIA QUERIES E RESPONSIVIDADE
    ============================================ */
 
+/* ===== MOBILE: Previne overflow horizontal ===== */
+
+@media (max-width: 575px) {
+    .container {
+        padding: 0 var(--spacing-3);
+    }
+    
+    .header-container {
+        padding: var(--spacing-3) var(--spacing-3);
+    }
+    
+    /* Reduz padding em sections */
+    section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    /* Garante que cards não ultrapassem */
+    .card, .stat-card {
+        max-width: 100%;
+    }
+}
+
 /* ===== BREAKPOINT 1: Mobile Extra Small (até 319px) ===== */
 
 @media (max-width: 319px) {
