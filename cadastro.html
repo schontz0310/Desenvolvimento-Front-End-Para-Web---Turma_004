@@ -721,12 +721,29 @@
             // Validação e Toast no envio do formulário
             const form = document.querySelector('form');
             if (form) {
+                // Adicionar validação em tempo real nos campos required
+                const requiredFields = form.querySelectorAll('[required]');
+                requiredFields.forEach(field => {
+                    // Remover borda vermelha quando o usuário digitar
+                    field.addEventListener('input', function() {
+                        if (this.value.trim()) {
+                            this.style.borderColor = '';
+                        }
+                    });
+                    
+                    // Validar quando perder o foco
+                    field.addEventListener('blur', function() {
+                        if (!this.value.trim()) {
+                            this.style.borderColor = '#e74c3c';
+                        }
+                    });
+                });
+                
                 form.addEventListener('submit', function(e) {
                     e.preventDefault();
                     e.stopPropagation();
                     
                     // Validação completa - verificar todos os campos required
-                    const requiredFields = form.querySelectorAll('[required]');
                     let camposVazios = [];
                     
                     requiredFields.forEach(field => {
