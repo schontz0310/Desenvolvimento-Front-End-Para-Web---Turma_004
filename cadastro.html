@@ -100,7 +100,7 @@
                     <p class="section-subtitle">Preencha todos os campos obrigatórios marcados com asterisco (*).</p>
                 </div>
 
-                <form action="https://formsubmit.co/voluntarios@esperancasolidaria.org.br" method="POST">
+                <form action="https://formsubmit.co/voluntarios@esperancasolidaria.org.br" method="POST" novalidate>
                 <!-- Dados Pessoais -->
                 <fieldset>
                     <legend>Dados Pessoais</legend>
@@ -679,6 +679,8 @@
             const container = document.getElementById('toastContainer');
             const toast = document.createElement('div');
             toast.className = `toast toast-${type}`;
+            toast.style.position = 'relative';
+            toast.style.marginBottom = '12px';
             toast.innerHTML = `
                 <div class="toast-content">
                     <div class="toast-message">${message}</div>
@@ -686,6 +688,11 @@
                 <button class="toast-close" onclick="this.parentElement.remove()">×</button>
             `;
             container.appendChild(toast);
+            
+            // Scroll suave para o topo quando mostrar toast de erro
+            if (type === 'danger') {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
             
             setTimeout(() => toast.classList.add('show'), 10);
             setTimeout(() => {
