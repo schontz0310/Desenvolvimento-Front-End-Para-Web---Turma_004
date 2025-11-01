@@ -725,12 +725,36 @@
                     e.preventDefault();
                     e.stopPropagation();
                     
-                    // Validação básica
-                    const nome = document.getElementById('nome').value.trim();
-                    const email = document.getElementById('email').value.trim();
+                    // Validação completa - verificar todos os campos required
+                    const requiredFields = form.querySelectorAll('[required]');
+                    let camposVazios = [];
                     
-                    if (!nome || !email) {
-                        showToast('danger', '✕ Preencha todos os campos obrigatórios!');
+                    requiredFields.forEach(field => {
+                        const value = field.value.trim();
+                        if (!value) {
+                            camposVazios.push(field);
+                            // Adicionar classe de erro
+                            field.style.borderColor = '#e74c3c';
+                        } else {
+                            // Remover classe de erro se estiver preenchido
+                            field.style.borderColor = '';
+                        }
+                    });
+                    
+                    // Se houver campos vazios, mostrar erro
+                    if (camposVazios.length > 0) {
+                        showToast('danger', `✕ Preencha todos os campos obrigatórios! (${camposVazios.length} campo(s) vazio(s))`);
+                        // Focar no primeiro campo vazio
+                        camposVazios[0].focus();
+                        return false;
+                    }
+                    
+                    // Validação de e-mail
+                    const email = document.getElementById('email').value.trim();
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(email)) {
+                        showToast('danger', '✕ Digite um e-mail válido!');
+                        document.getElementById('email').focus();
                         return false;
                     }
                     
@@ -740,6 +764,10 @@
                     setTimeout(() => {
                         showToast('success', '✓ Cadastro enviado com sucesso! Em breve entraremos em contato.');
                         form.reset();
+                        // Remover bordas de erro
+                        requiredFields.forEach(field => {
+                            field.style.borderColor = '';
+                        });
                     }, 1500);
                     
                     return false;
