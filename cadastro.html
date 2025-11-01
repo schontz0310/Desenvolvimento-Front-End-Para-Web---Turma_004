@@ -703,29 +703,41 @@
             document.getElementById('infoModal').classList.remove('active');
         }
 
-        // Fechar modal ao clicar no backdrop
-        document.querySelector('.modal-backdrop')?.addEventListener('click', closeModal);
-
-        // Validação e Toast no envio do formulário
-        document.querySelector('form')?.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Validação básica
-            const nome = document.getElementById('nome')?.value;
-            const email = document.getElementById('email')?.value;
-            
-            if (!nome || !email) {
-                showToast('danger', '✕ Preencha todos os campos obrigatórios!');
-                return;
+        // Inicialização quando DOM carregar
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fechar modal ao clicar no backdrop
+            const backdrop = document.querySelector('.modal-backdrop');
+            if (backdrop) {
+                backdrop.addEventListener('click', closeModal);
             }
             
-            // Simular envio
-            showToast('info', 'ℹ Enviando cadastro...');
-            
-            setTimeout(() => {
-                showToast('success', '✓ Cadastro enviado com sucesso! Em breve entraremos em contato.');
-                this.reset();
-            }, 1500);
+            // Validação e Toast no envio do formulário
+            const form = document.querySelector('form');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Validação básica
+                    const nome = document.getElementById('nome').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    
+                    if (!nome || !email) {
+                        showToast('danger', '✕ Preencha todos os campos obrigatórios!');
+                        return false;
+                    }
+                    
+                    // Simular envio
+                    showToast('info', 'ℹ Enviando cadastro...');
+                    
+                    setTimeout(() => {
+                        showToast('success', '✓ Cadastro enviado com sucesso! Em breve entraremos em contato.');
+                        form.reset();
+                    }, 1500);
+                    
+                    return false;
+                });
+            }
         });
 
         // Adicionar botão para abrir modal
