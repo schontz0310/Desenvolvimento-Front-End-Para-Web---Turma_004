@@ -1,202 +1,335 @@
-# ONG Esperança Solidária - Plataforma Web
+# 🎨 ONG Esperança Solidária - Experiência Prática II
 
-## 📋 Sobre o Projeto
+## 📋 Informações do Projeto
 
-Plataforma web completa desenvolvida para ONGs gerenciarem suas atividades, divulgar projetos, captar recursos e engajar voluntários. Este projeto aplica fundamentos de HTML5, CSS3 e JavaScript em um contexto socialmente relevante.
+**Disciplina:** Desenvolvimento Front-End Para Web  
+**Turma:** 004  
+**Entrega:** Experiência Prática II - Estilização e Layouts  
+**Branch:** `Experiencia-pratica-02`
 
-## 🎯 Objetivo
+---
 
-Fornecer às organizações do terceiro setor uma presença digital profissional e funcional, facilitando a comunicação com voluntários, doadores e beneficiários.
+## 🎯 Objetivos da Entrega
+
+Aplicar CSS3 para transformar a estrutura HTML da Entrega I em uma interface visual profissional, responsiva e acessível, demonstrando domínio de:
+
+- Sistema de Design com variáveis CSS customizadas
+- Layouts modernos com CSS Grid e Flexbox
+- Técnicas de estilização avançadas
+- Responsividade em múltiplos dispositivos
+
+---
 
 ## 🚀 Tecnologias Utilizadas
 
-- HTML5
-- CSS3 (em desenvolvimento)
-- JavaScript (em desenvolvimento)
+- **HTML5** - Estrutura semântica
+- **CSS3** - Estilização completa
+  - CSS Grid Layout
+  - Flexbox
+  - CSS Variables (Custom Properties)
+  - Media Queries
+  - Transitions & Transforms
+  - Pseudo-classes e Pseudo-elementos
+- **Checkbox Hack** - Menu hambúrguer sem JavaScript
 - Git & GitHub
 
 ## 📁 Estrutura do Projeto
 
 ```
 ong-esperanca-solidaria/
-├── index.html          # Página inicial com informações da ONG
-├── projetos.html       # Página de projetos sociais e doações
-├── cadastro.html       # Formulário de cadastro de voluntários
-├── css/                # Arquivos de estilo (futuro)
-│   └── .gitkeep
-├── js/                 # Scripts JavaScript (futuro)
-│   └── .gitkeep
-├── img/                # Imagens do site
-│   └── .gitkeep
-├── assets/             # Recursos adicionais
-│   ├── fonts/          # Fontes customizadas
-│   │   └── .gitkeep
-│   └── icons/          # Ícones SVG
-│       └── .gitkeep
-├── docs/               # Documentação do projeto
-│   └── .gitkeep
-├── context.txt         # Contexto da disciplina
-├── CHECKLIST-ENTREGA.md # Checklist da primeira entrega
-└── README.md           # Documentação do projeto
+├── index.html
+├── projetos.html
+├── cadastro.html
+├── css/
+│   ├── variables.css      → Design System (cores, fontes, espaçamentos, shadows)
+│   ├── base.css          → Reset básico + tipografia fundamental
+│   ├── layout.css        → Grid 12 colunas + Flexbox + utilitários
+│   ├── navigation.css    → Menu responsivo + hambúrguer CSS puro
+│   ├── components.css    → Cards, botões, badges, alerts, modals
+│   ├── forms.css         → Formulários estilizados + validação
+│   ├── responsive.css    → 7 breakpoints + media queries
+│   └── styles.css        → Arquivo principal (importa todos)
+├── img/                  → Imagens do projeto
+├── docs/
+│   ├── README.md         → Este arquivo
+│   ├── CHECKLIST-ENTREGA.md
+│   └── TEXTO-ENTREGA.md
+└── .gitignore
 ```
-
-## 📄 Páginas
-
-### 1. Página Inicial (index.html)
-- Apresentação da organização
-- Missão, visão e valores
-- Áreas de atuação
-- Impacto social (números)
-- Depoimentos
-- Informações de contato completas
-
-### 2. Projetos (projetos.html)
-- Lista de projetos sociais ativos
-- Oportunidades de voluntariado
-- Sistema de doações
-- Galeria de imagens
-
-### 3. Cadastro (cadastro.html)
-- Formulário completo de cadastro de voluntários
-- Validação HTML5 nativa
-- Máscaras de input (CPF, telefone, CEP)
-- Campos: nome, email, CPF, telefone, data de nascimento, endereço, CEP, cidade, estado
-
-## ✅ Requisitos Implementados - Primeira Entrega
-
-### HTML5 Semântico ✅
-- [x] Estrutura HTML5 completa em 3 páginas
-- [x] Hierarquia de títulos lógica e consistente
-- [x] Meta tags para SEO (description, keywords, viewport)
-- [x] Elementos semânticos (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`, `<figure>`, `<figcaption>`, `<blockquote>`, `<address>`)
-- [x] Uso de tags semânticas adequadas
-
-### Páginas Obrigatórias ✅
-- [x] **index.html** - Página inicial com informações da organização e contato
-- [x] **projetos.html** - Projetos sociais, voluntariado e sistema de doações
-- [x] **cadastro.html** - Formulário completo de cadastro de voluntários
-
-### Formulário Completo ✅
-- [x] Validação HTML5 nativa (atributos `required`, `pattern`, `minlength`, `maxlength`)
-- [x] Máscaras de input para CPF, telefone e CEP
-- [x] Tipos de input HTML5: text, email, tel, date, checkbox, radio, select, textarea
-- [x] Agrupamento lógico com `<fieldset>` e `<legend>`
-- [x] Labels associados corretamente
-- [x] Atributos de acessibilidade (`aria-required`)
-
-### Campos do Formulário ✅
-- [x] Nome Completo
-- [x] E-mail
-- [x] CPF (com máscara: 000.000.000-00)
-- [x] Telefone (com máscara: (00) 00000-0000)
-- [x] Data de Nascimento
-- [x] Endereço completo
-- [x] CEP (com máscara: 00000-000)
-- [x] Cidade
-- [x] Estado (select com todos os estados brasileiros)
-
-### Recursos Adicionais Implementados ✅
-- [x] Múltiplos `<fieldset>` para organização
-- [x] Tabelas semânticas com `<thead>`, `<tbody>`, `<tfoot>`
-- [x] Elementos `<figure>` e `<figcaption>` para galeria
-- [x] Uso de `<blockquote>` e `<cite>` para depoimentos
-- [x] Links externos com `target="_blank"` e `rel="noopener"`
-- [x] Estrutura de navegação consistente em todas as páginas
-
-### Pendente para Próximas Entregas 📋
-- [ ] Imagens otimizadas (lista completa abaixo)
-- [ ] CSS3 para estilização e responsividade
-- [ ] JavaScript para máscaras dinâmicas e validações adicionais
-- [ ] Validação W3C dos HTMLs
-
-## 🎨 Recursos
-
-### Imagens Necessárias
-
-**Comum às 3 páginas:**
-- `logo.png` - Logo da ONG (150x80px)
-
-**index.html - Página Inicial:**
-- `hero-banner.jpg` - Banner principal (1200x500px)
-- `sobre-nos.jpg` - Foto da equipe (600x400px)
-- `area-educacao.jpg` - Área de educação (400x300px)
-- `area-capacitacao.jpg` - Área de capacitação profissional (400x300px)
-- `area-cultura.jpg` - Área de cultura e arte (400x300px)
-- `area-assistencia.jpg` - Área de assistência social (400x300px)
-- `depoimento-maria.jpg` - Foto depoimento Maria Silva (150x150px)
-- `depoimento-joao.jpg` - Foto depoimento João Santos (150x150px)
-- `contato.jpg` - Foto da sede (600x400px)
-
-**projetos.html - Projetos e Doações:**
-- `projetos-banner.jpg` - Banner página de projetos (1200x400px)
-- `projeto-educacao.jpg` - Projeto Futuro Brilhante (600x400px)
-- `projeto-capacitacao.jpg` - Projeto Novos Caminhos (600x400px)
-- `projeto-cultura.jpg` - Projeto Arte e Vida (600x400px)
-- `projeto-assistencia.jpg` - Projeto Mãos Solidárias (600x400px)
-- `projeto-idosos.jpg` - Projeto Viver Bem (600x400px)
-- `galeria-01.jpg` - Galeria: Festa Junina (400x300px)
-- `galeria-02.jpg` - Galeria: Formatura (400x300px)
-- `galeria-03.jpg` - Galeria: Apresentação teatral (400x300px)
-- `galeria-04.jpg` - Galeria: Distribuição de cestas (400x300px)
-- `galeria-05.jpg` - Galeria: Excursão com idosos (400x300px)
-- `galeria-06.jpg` - Galeria: Mutirão de voluntários (400x300px)
-- `voluntarios-banner.jpg` - Banner voluntariado (800x400px)
-- `doacoes-banner.jpg` - Banner doações (800x400px)
-
-**cadastro.html - Cadastro de Voluntários:**
-- `cadastro-banner.jpg` - Banner página de cadastro (1200x400px)
-- `voluntariado-info.jpg` - Informações sobre voluntariado (800x400px)
-- `voluntario-1.jpg` - Depoimento Carla Mendes (150x150px)
-- `voluntario-2.jpg` - Depoimento Roberto Silva (150x150px)
-- `contato-voluntarios.jpg` - Equipe de coordenação (600x400px)
-
-**Total: 32 imagens necessárias**
-
-**Observação:** Como este é um projeto educacional, você pode usar imagens de bancos gratuitos como:
-- [Unsplash](https://unsplash.com/)
-- [Pexels](https://pexels.com/)
-- [Pixabay](https://pixabay.com/)
-
-Lembre-se de otimizar as imagens para web (compressão adequada) antes de adicionar ao projeto.
-
-## 🔍 Validação
-
-Todos os arquivos HTML devem ser validados usando o [W3C Markup Validation Service](https://validator.w3.org/).
-
-## 👥 Personas Atendidas
-
-- **Administrador da ONG**: gerencia informações e projetos
-- **Voluntário**: busca oportunidades de trabalho voluntário
-- **Doador/Apoiador**: conhece projetos e realiza doações
-- **Visitante**: conhece a organização e seus impactos
-
-## 📦 Como Visualizar
-
-1. Clone o repositório:
-```bash
-git clone https://github.com/seu-usuario/ong-esperanca-solidaria.git
-```
-
-2. Abra o arquivo `index.html` em seu navegador
-
-## 📝 Licença
-
-Este projeto foi desenvolvido para fins educacionais como parte da disciplina de Desenvolvimento Front-end para Web.
-
-## 👨‍💻 Autor(es)
-
-- Nome do Aluno/Grupo
-- Curso: Análise e Desenvolvimento de Sistemas
-- Instituição: [Nome da Instituição]
-- Ano: 2024
-
-## 📞 Contato do Projeto (Fictício)
-
-- **E-mail**: contato@esperancasolidaria.org.br
-- **Telefone**: (11) 3456-7890
-- **WhatsApp**: (11) 98765-4321
-- **Endereço**: Rua das Flores, 1234 - Centro, São Paulo - SP
 
 ---
 
-**Nota**: Esta é uma plataforma fictícia desenvolvida para fins educacionais. Qualquer semelhança com organizações reais é mera coincidência.
+## ✅ Especificações Técnicas Implementadas
+
+### 1️⃣ Sistema de Design
+✅ Design system consistente com variáveis CSS customizadas  
+✅ Paleta de cores com **20+ cores** (primárias, secundárias, neutras, destaque)  
+✅ Tipografia hierárquica com **10 tamanhos de fonte** (0.75rem a 3.5rem)  
+✅ Sistema de espaçamento modular (4px, 8px, 12px, 16px, 24px, 32px, 48px, 64px, 96px, 128px)
+
+### 2️⃣ Layouts Responsivos
+✅ Layout principal usando **CSS Grid** para estrutura geral (12 colunas)  
+✅ **Flexbox** para componentes internos e alinhamentos  
+✅ **7 breakpoints** responsivos:
+- `320px` - Mobile extra small
+- `576px` - Mobile
+- `768px` - Tablet
+- `992px` - Desktop small
+- `1200px` - Desktop
+- `1400px` - Desktop large
+- Print media queries
+
+✅ Sistema de grid customizado (12 colunas)  
+✅ Layouts específicos para diferentes tipos de conteúdo
+
+### 3️⃣ Navegação Sofisticada e Interativa
+✅ Menu principal responsivo com submenu dropdown  
+✅ Navegação mobile com menu hambúrguer **100% CSS puro** (checkbox hack)  
+✅ Animações e transições suaves  
+✅ Overlay/backdrop para menu mobile
+
+### 4️⃣ Componentes de Interface
+✅ Sistema de cards responsivos para projetos  
+✅ Botões com estados visuais (hover, focus, active, disabled)  
+✅ Formulários estilizados com validação visual  
+✅ Componentes de feedback (alerts, toasts, modals)  
+✅ Sistema de badges e tags para categorização  
+✅ Progress bars e spinners  
+✅ Testimonials (depoimentos)  
+✅ Stats cards (cartões de estatísticas)
+
+---
+
+## 📁 Estrutura CSS Modular
+
+### **variables.css**
+- Paleta de cores completa (20+ cores)
+- Tamanhos de fonte (10 níveis)
+- Espaçamento modular (11 níveis)
+- Bordas e sombras
+- Transições e animações
+- Z-index scale
+- Breakpoints
+
+### **base.css**
+- Reset básico com box-sizing
+- Tipografia base (h1-h6, p, listas)
+- Links e estados
+- Elementos semânticos
+- Seleção customizada
+- Scrollbar personalizada
+
+### **layout.css**
+- Container responsivo
+- Sistema Grid 12 colunas
+- Utilitários Flexbox
+- Layouts específicos (hero, sidebar, cards grid)
+- Utilitários de espaçamento
+- Utilitários de display e alinhamento
+
+### **navigation.css**
+- Header sticky
+- Menu principal desktop
+- Dropdown menus
+- Menu hambúrguer mobile (CSS puro)
+- Overlay/backdrop
+- Breadcrumb
+
+### **components.css**
+- Botões (6 variantes)
+- Cards (padrão, horizontal)
+- Badges (7 cores)
+- Tags
+- Alerts (4 tipos)
+- Toasts
+- Modals
+- Progress bars
+- Spinners
+
+### **forms.css**
+- Inputs estilizados
+- Selects customizados
+- Checkboxes e radios
+- Toggle switches
+- Fieldsets e legends
+- Validação visual
+- Input groups
+- File inputs
+- Range inputs
+
+### **responsive.css**
+- 7 breakpoints definidos
+- Grid responsivo por tamanho
+- Utilitários de visibilidade
+- Text align responsivo
+- Media queries para orientação
+- Print styles
+
+---
+
+## 🎨 Design System
+
+### Cores Principais
+```css
+--color-primary: #2c3e50;        /* Azul escuro profissional */
+--color-secondary: #e74c3c;      /* Vermelho solidário */
+--color-accent: #f39c12;         /* Laranja esperança */
+--color-success: #27ae60;        /* Verde sucesso */
+```
+
+### Tipografia
+```css
+Família: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+Tamanhos: 0.75rem (12px) até 3.5rem (56px)
+Pesos: 300, 400, 500, 600, 700, 800
+```
+
+### Espaçamento Modular
+```css
+Base: 4px
+Escala: 0, 4, 8, 12, 16, 24, 32, 48, 64, 96, 128px
+```
+
+---
+
+## 🌐 Páginas Implementadas
+
+### 📄 index.html
+**Seções estilizadas:**
+- Hero section com gradient overlay
+- Quem Somos (grid de informações)
+- Nosso Impacto (stats cards em grid)
+- Áreas de Atuação (cards grid 4 colunas)
+- Depoimentos (testimonials em 2 colunas)
+- Como Ajudar (CTA section com cards)
+- Transparência (botões de download)
+- Contato (informações em grid)
+- Footer profissional (3 colunas)
+
+### 📄 projetos.html
+**Seções estilizadas:**
+- Hero de projetos
+- Projeto em destaque (card com imagem)
+- Lista de outros projetos
+- Oportunidades de voluntariado (cards grid)
+- Depoimento de voluntário
+- Sistema de doações
+- Transparência com tabela estilizada
+- Relatórios (botões de download)
+- CTA final
+- Footer profissional
+
+### 📄 cadastro.html
+**Seções estilizadas:**
+- Hero de cadastro
+- Benefícios e Como Funciona (2 colunas)
+- Formulário completo com form-groups
+- Dúvidas Frequentes
+- CTA de ajuda
+- Footer profissional
+
+---
+
+## ✅ Checklist de Requisitos
+
+| Requisito | Status |
+|-----------|--------|
+| Design system com variáveis CSS | ✅ Implementado |
+| 8+ cores na paleta | ✅ 20+ cores |
+| 5+ tamanhos de fonte | ✅ 10 tamanhos |
+| Espaçamento modular | ✅ 11 níveis |
+| CSS Grid para estrutura | ✅ 12 colunas |
+| Flexbox para componentes | ✅ Implementado |
+| 5+ breakpoints | ✅ 7 breakpoints |
+| Menu responsivo com dropdown | ✅ Implementado |
+| Menu hambúrguer mobile | ✅ CSS puro |
+| Cards responsivos | ✅ Implementado |
+| Botões com estados | ✅ 5 estados |
+| Formulários estilizados | ✅ Implementado |
+| Validação visual | ✅ Implementado |
+| Alerts e feedback | ✅ Implementado |
+| Badges e tags | ✅ Implementado |
+| Estrutura organizada | ✅ Modular |
+| CSS modular | ✅ 7 módulos |
+
+**Status:** ✅ **TODOS OS REQUISITOS ATENDIDOS**
+
+---
+
+## 🚀 Diferenciais Implementados
+
+1. ✨ **Menu 100% CSS** - Hamburger menu usando apenas CSS (checkbox hack)
+2. 🎯 **Sistema Modular** - 7 arquivos CSS organizados por responsabilidade
+3. 🎨 **Design Profissional** - Cores harmoniosas e espaçamentos consistentes
+4. 📱 **Mobile-First** - Desenvolvimento responsivo desde o início
+5. ♿ **Acessibilidade** - Labels corretos, ARIA attributes, focus states
+6. 🔄 **Animações Suaves** - Transitions em todos os elementos interativos
+7. 📊 **Componentes Reutilizáveis** - Classes utilitárias e components
+8. ✅ **Validação Visual** - Estados de sucesso/erro em formulários
+
+---
+
+## 📝 Como Usar
+
+1. Clone o repositório na branch correta:
+```bash
+git clone -b Experiencia-pratica-02 https://github.com/schontz0310/Desenvolvimento-Front-End-Para-Web---Turma_004.git
+```
+
+2. Abra qualquer arquivo HTML no navegador
+3. Teste a responsividade redimensionando a janela
+4. Teste o menu hambúrguer em dispositivos móveis (< 992px)
+
+---
+
+## 🎓 Aprendizados
+
+### CSS Grid
+- Grid template areas
+- Grid template columns/rows
+- Gap e grid-gap
+- Auto-fit e auto-fill
+- Minmax para responsividade
+
+### Flexbox
+- Justify-content e align-items
+- Flex-direction e flex-wrap
+- Flex-grow, flex-shrink, flex-basis
+- Order para reordenação
+
+### CSS Variables
+- Definição de custom properties
+- Reutilização de valores
+- Manutenção facilitada
+- Tematização
+
+### Responsividade
+- Mobile-first approach
+- Breakpoints estratégicos
+- Media queries
+- Imagens responsivas
+- Typography scale
+
+### Componentização CSS
+- Reutilização de classes
+- BEM-like naming
+- Utility classes
+- Component states
+
+---
+
+## 👨‍💻 Autor
+
+**Turma:** 004  
+**Disciplina:** Desenvolvimento Front-End Para Web  
+**Entrega:** Experiência Prática II - Estilização e Layouts
+
+---
+
+## 📄 Licença
+
+Projeto acadêmico - Todos os direitos reservados © 2024
+
+---
+
+**Nota**: Esta é uma plataforma fictícia desenvolvida para fins educacionais.
