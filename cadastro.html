@@ -159,8 +159,8 @@
                         </div>
                     </div>
                     
-                    <p>
-                        <label for="nascimento">Data de Nascimento: *</label><br>
+                    <div class="form-group">
+                        <label for="nascimento" class="required">Data de Nascimento:</label>
                         <input 
                             type="date" 
                             id="nascimento" 
@@ -169,18 +169,18 @@
                             min="1924-01-01"
                             max="2006-12-31"
                             aria-required="true">
-                    </p>
+                    </div>
                     
-                    <p>
-                        <label for="genero">Gênero:</label><br>
+                    <div class="form-group">
+                        <label for="genero">Gênero:</label>
                         <select id="genero" name="genero">
                             <option value="">Selecione...</option>
                             <option value="feminino">Feminino</option>
                             <option value="masculino">Masculino</option>
-                            <option value="nao-binario">Não-binário</option>
-                            <option value="prefiro-nao-informar">Prefiro não informar</option>
+                            <option value="outro">Outro</option>
+                            <option value="nao-informar">Prefiro não informar</option>
                         </select>
-                    </p>
+                    </div>
                 </fieldset>
 
                 <hr>
@@ -189,8 +189,8 @@
                 <fieldset>
                     <legend>Endereço</legend>
                     
-                    <p>
-                        <label for="cep">CEP: *</label><br>
+                    <div class="form-group">
+                        <label for="cep" class="required">CEP:</label>
                         <input 
                             type="text" 
                             id="cep" 
@@ -199,74 +199,66 @@
                             pattern="[0-9]{5}-[0-9]{3}"
                             title="Digite o CEP no formato: 00000-000"
                             required
-                            maxlength="9"
-                            aria-required="true"
-                            size="15">
-                    </p>
+                            maxlength="9">
+                    </div>
                     
-                    <p>
-                        <label for="endereco">Endereço: *</label><br>
+                    <div class="form-group">
+                        <label for="endereco" class="required">Endereço:</label>
                         <input 
                             type="text" 
                             id="endereco" 
                             name="endereco" 
-                            placeholder="Rua, Avenida, etc."
+                            placeholder="Rua, Avenida, etc"
                             required
-                            maxlength="200"
-                            aria-required="true"
-                            size="50">
-                    </p>
+                            maxlength="100">
+                    </div>
                     
-                    <p>
-                        <label for="numero">Número:</label><br>
-                        <input 
-                            type="text" 
-                            id="numero" 
-                            name="numero" 
-                            placeholder="Número ou S/N"
-                            maxlength="10"
-                            size="15">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="numero">Número:</label>
+                            <input 
+                                type="text" 
+                                id="numero" 
+                                name="numero" 
+                                placeholder="Número"
+                                maxlength="10">
+                        </div>
                         
-                        &nbsp;&nbsp;&nbsp;
-                        
-                        <label for="complemento">Complemento:</label><br>
-                        <input 
-                            type="text" 
-                            id="complemento" 
-                            name="complemento" 
-                            placeholder="Apto, bloco, etc."
-                            maxlength="50"
-                            size="30">
-                    </p>
+                        <div class="form-group">
+                            <label for="complemento">Complemento:</label>
+                            <input 
+                                type="text" 
+                                id="complemento" 
+                                name="complemento" 
+                                placeholder="Apto, Bloco, etc"
+                                maxlength="50">
+                        </div>
+                    </div>
                     
-                    <p>
-                        <label for="bairro">Bairro: *</label><br>
+                    <div class="form-group">
+                        <label for="bairro" class="required">Bairro:</label>
                         <input 
                             type="text" 
                             id="bairro" 
                             name="bairro" 
-                            placeholder="Nome do bairro"
+                            placeholder="Bairro"
                             required
-                            maxlength="100"
-                            aria-required="true"
-                            size="30">
-                    </p>
+                            maxlength="50">
+                    </div>
                     
-                    <p>
-                        <label for="cidade">Cidade: *</label><br>
+                    <div class="form-group">
+                        <label for="cidade" class="required">Cidade:</label>
                         <input 
                             type="text" 
                             id="cidade" 
                             name="cidade" 
-                            placeholder="Nome da cidade"
+                            placeholder="Cidade"
                             required
-                            maxlength="100"
-                            aria-required="true"
-                            size="30">
-                    </p>
+                            maxlength="50">
+                    </div>
                     
-                    <p>
-                        <label for="estado">Estado: *</label><br>
+                    <div class="form-group">
+                        <label for="estado" class="required">Estado:</label>
                         <select id="estado" name="estado" required aria-required="true">
                             <option value="">Selecione...</option>
                             <option value="AC">Acre</option>
@@ -297,7 +289,7 @@
                             <option value="SE">Sergipe</option>
                             <option value="TO">Tocantins</option>
                         </select>
-                    </p>
+                    </div>
                 </fieldset>
 
                 <hr>
@@ -423,8 +415,8 @@
                         </div>
                     </fieldset>
                     
-                    <p>
-                        <label for="disponibilidade">Disponibilidade Semanal: *</label><br>
+                    <div class="form-group">
+                        <label for="disponibilidade" class="required">Disponibilidade Semanal:</label>
                         <select id="disponibilidade" name="disponibilidade" required aria-required="true">
                             <option value="">Selecione...</option>
                             <option value="2-4h">2 a 4 horas semanais</option>
@@ -432,7 +424,7 @@
                             <option value="6-8h">6 a 8 horas semanais</option>
                             <option value="8h-mais">Mais de 8 horas semanais</option>
                         </select>
-                    </p>
+                    </div>
                     
                     <fieldset>
                         <legend>Período Preferencial: * (escolha os períodos disponíveis)</legend>
@@ -505,40 +497,37 @@
                         </div>
                     </fieldset>
                     
-                    <p>
-                        <label for="motivacao">Por que você quer ser voluntário? *</label><br>
+                    <div class="form-group">
+                        <label for="motivacao" class="required">Por que você quer ser voluntário?</label>
                         <textarea 
                             id="motivacao" 
                             name="motivacao" 
                             rows="6"
-                            cols="60"
                             placeholder="Conte-nos sobre sua motivação para ser voluntário..."
                             required
-                            minlength="50"
                             maxlength="1000"
                             aria-required="true"></textarea>
-                    </p>
+                    </div>
                 </fieldset>
 
                 <hr>
 
-                <!-- Como nos conheceu -->
+                <!-- Como Conheceu a ONG -->
                 <fieldset>
                     <legend>Como Conheceu a ONG?</legend>
                     
-                    <p>
-                        <label for="como-conheceu">Como ficou sabendo da ONG Esperança Solidária?</label><br>
+                    <div class="form-group">
+                        <label for="como-conheceu">Como ficou sabendo da ONG Esperança Solidária?</label>
                         <select id="como-conheceu" name="como-conheceu">
                             <option value="">Selecione...</option>
                             <option value="redes-sociais">Redes Sociais</option>
-                        <option value="indicacao">Indicação de amigo/familiar</option>
-                        <option value="internet">Pesquisa na Internet</option>
-                        <option value="eventos">Eventos da ONG</option>
-                        <option value="midia">Mídia (TV, rádio, jornal)</option>
-                        <option value="universidade">Universidade/Escola</option>
-                        <option value="outro">Outro</option>
-                    </select>
-                    </p>
+                            <option value="amigo">Indicação de Amigo/Familiar</option>
+                            <option value="internet">Busca na Internet</option>
+                            <option value="midia">Mídia (TV, rádio, jornal)</option>
+                            <option value="universidade">Universidade/Escola</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
                 </fieldset>
 
                 <hr>
