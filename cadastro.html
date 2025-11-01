@@ -514,40 +514,48 @@
                 <fieldset>
                     <legend>Termos e Condições</legend>
                     
-                    <p>
+                    <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 12px;">
                         <input 
                             type="checkbox" 
                             id="termo-veracidade" 
                             name="termo-veracidade" 
                             value="aceito"
-                            required>
-                        <label for="termo-veracidade">* Declaro que as informações fornecidas são verdadeiras</label><br>
-                        
+                            required
+                            style="margin-top: 4px; flex-shrink: 0;">
+                        <label for="termo-veracidade" style="cursor: pointer;">* Declaro que as informações fornecidas são verdadeiras</label>
+                    </div>
+                    
+                    <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 12px;">
                         <input 
                             type="checkbox" 
                             id="termo-compromisso" 
                             name="termo-compromisso" 
                             value="aceito"
-                        required>
-                        <label for="termo-compromisso">* Comprometo-me a cumprir as atividades voluntárias com responsabilidade</label><br>
-                        
+                            required
+                            style="margin-top: 4px; flex-shrink: 0;">
+                        <label for="termo-compromisso" style="cursor: pointer;">* Comprometo-me a cumprir as atividades voluntárias com responsabilidade</label>
+                    </div>
+                    
+                    <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 12px;">
                         <input 
                             type="checkbox" 
                             id="termo-lgpd" 
                             name="termo-lgpd" 
                             value="aceito"
-                            required>
-                        <label for="termo-lgpd">* Autorizo o uso dos meus dados pessoais conforme a Lei Geral de Proteção de Dados (LGPD)</label>
-                    </p>
+                            required
+                            style="margin-top: 4px; flex-shrink: 0;">
+                        <label for="termo-lgpd" style="cursor: pointer;">* Autorizo o uso dos meus dados pessoais conforme a Lei Geral de Proteção de Dados (LGPD)</label>
+                    </div>
                     
-                    <p>
+                    <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 12px;">
                         <input 
                             type="checkbox" 
                             id="termo-newsletter" 
                             name="termo-newsletter" 
-                            value="aceito">
-                        <label for="termo-newsletter">Desejo receber novidades e informações da ONG por e-mail</label>
-                    </p>
+                            value="aceito"
+                            style="margin-top: 4px; flex-shrink: 0;">
+                        <label for="termo-newsletter" style="cursor: pointer;">Desejo receber novidades e informações da ONG por e-mail</label>
+                    </div>
                 </fieldset>
 
                 <!-- Botões de Ação -->
