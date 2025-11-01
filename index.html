@@ -7,9 +7,12 @@
     <meta name="keywords" content="ONG, projetos sociais, voluntariado, doações, ação social">
     <title>ONG Esperança Solidária</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/accessibility.css">
 </head>
 <body class="site-layout">
-    <header class="site-header">
+    <!-- Skip Link para Acessibilidade -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    <header class="site-header" role="banner">
         <input type="checkbox" id="menu-toggle" class="menu-checkbox">
         
         <div class="header-container">
@@ -27,7 +30,7 @@
                 <span></span>
             </label>
             
-            <nav class="main-nav">
+            <nav class="main-nav" role="navigation" aria-label="Menu principal">
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="index.html" class="nav-link active">Início</a></li>
                     <li class="nav-item"><a href="projetos.html" class="nav-link">Projetos</a></li>
@@ -37,7 +40,7 @@
         </div>
         
         <!-- Menu Mobile -->
-        <nav class="mobile-menu">
+        <nav class="mobile-menu" role="navigation" aria-label="Menu mobile">
             <ul class="mobile-nav-menu">
                 <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link active">Início</a></li>
                 <li class="mobile-nav-item"><a href="projetos.html" class="mobile-nav-link">Projetos</a></li>
@@ -48,7 +51,7 @@
         <label for="menu-toggle" class="menu-overlay"></label>
     </header>
 
-    <main class="site-main">
+    <main class="site-main" id="main-content" role="main">
         <!-- Seção Hero -->
         <section class="hero">
             <div class="container">
@@ -311,7 +314,7 @@
         </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer" role="contentinfo">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
@@ -342,5 +345,7 @@
         </div>
     </footer>
 
+    <!-- JavaScript de Acessibilidade (Exp. 04) -->
+    <script src="js/accessibility.js"></script>
 </body>
 </html>

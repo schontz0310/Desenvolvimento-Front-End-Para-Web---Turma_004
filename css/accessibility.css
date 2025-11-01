@@ -1,0 +1,341 @@
+/**
+ * CSS de Acessibilidade - WCAG 2.1 Nível AA
+ * Experiência Prática 04
+ */
+
+/* ========================================
+   SKIP LINKS (Pular Navegação)
+   ======================================== */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--color-primary, #2c3e50);
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    z-index: 10000;
+    border-radius: 0 0 4px 0;
+    font-weight: 600;
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: 3px solid var(--color-accent, #f39c12);
+    outline-offset: 2px;
+}
+
+/* ========================================
+   FOCUS VISÍVEL (Navegação por Teclado)
+   ======================================== */
+
+/* Reset e melhoria do focus padrão */
+*:focus {
+    outline: 3px solid var(--color-accent, #f39c12);
+    outline-offset: 2px;
+}
+
+/* Focus em links */
+a:focus {
+    outline: 3px solid var(--color-accent, #f39c12);
+    outline-offset: 2px;
+    background-color: rgba(243, 156, 18, 0.1);
+}
+
+/* Focus em botões */
+button:focus,
+.btn:focus {
+    outline: 3px solid var(--color-accent, #f39c12);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(243, 156, 18, 0.2);
+}
+
+/* Focus em inputs */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 3px solid var(--color-accent, #f39c12);
+    outline-offset: 2px;
+    border-color: var(--color-accent, #f39c12);
+}
+
+/* Focus em cards clicáveis */
+.card:focus-within {
+    outline: 3px solid var(--color-accent, #f39c12);
+    outline-offset: 2px;
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   MODO ESCURO (Dark Mode)
+   ======================================== */
+
+/* Preferência do sistema */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        /* Cores principais */
+        --color-bg: #1a1a1a;
+        --color-surface: #2d2d2d;
+        --color-text: #e0e0e0;
+        --color-text-secondary: #b0b0b0;
+        
+        /* Cores primárias ajustadas */
+        --color-primary: #4a90e2;
+        --color-secondary: #ff6b6b;
+        --color-accent: #ffd93d;
+        
+        /* Bordas e sombras */
+        --color-border: #404040;
+        --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.5);
+        --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.6);
+        --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.7);
+    }
+}
+
+/* Tema escuro manual */
+[data-theme="dark"] {
+    --color-bg: #1a1a1a;
+    --color-surface: #2d2d2d;
+    --color-text: #e0e0e0;
+    --color-text-secondary: #b0b0b0;
+    --color-primary: #4a90e2;
+    --color-secondary: #ff6b6b;
+    --color-accent: #ffd93d;
+    --color-border: #404040;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.6);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+[data-theme="dark"] body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .site-header {
+    background-color: var(--color-surface);
+    border-bottom-color: var(--color-border);
+}
+
+[data-theme="dark"] .site-footer {
+    background-color: var(--color-surface);
+    border-top-color: var(--color-border);
+}
+
+[data-theme="dark"] .card {
+    background-color: var(--color-surface);
+    border-color: var(--color-border);
+}
+
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+    background-color: var(--color-surface);
+    border-color: var(--color-border);
+    color: var(--color-text);
+}
+
+/* ========================================
+   MODO ALTO CONTRASTE
+   ======================================== */
+
+[data-theme="high-contrast"] {
+    --color-bg: #000000;
+    --color-surface: #000000;
+    --color-text: #ffffff;
+    --color-text-secondary: #ffffff;
+    --color-primary: #ffff00;
+    --color-secondary: #00ffff;
+    --color-accent: #00ff00;
+    --color-border: #ffffff;
+    --color-success: #00ff00;
+    --color-danger: #ff0000;
+    --color-warning: #ffff00;
+    --color-info: #00ffff;
+}
+
+[data-theme="high-contrast"] * {
+    border-color: var(--color-border) !important;
+}
+
+[data-theme="high-contrast"] body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+[data-theme="high-contrast"] a {
+    color: var(--color-accent);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+[data-theme="high-contrast"] button,
+[data-theme="high-contrast"] .btn {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    border: 3px solid var(--color-border);
+    font-weight: bold;
+}
+
+[data-theme="high-contrast"] .card {
+    background-color: var(--color-bg);
+    border: 3px solid var(--color-border);
+}
+
+/* ========================================
+   PREFERÊNCIAS DE MOVIMENTO REDUZIDO
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ========================================
+   TOOLTIPS ACESSÍVEIS
+   ======================================== */
+
+[data-tooltip] {
+    position: relative;
+}
+
+[data-tooltip]:hover::after,
+[data-tooltip]:focus::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 12px;
+    background: var(--color-text, #2c3e50);
+    color: white;
+    border-radius: 4px;
+    white-space: nowrap;
+    z-index: 1000;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* ========================================
+   BOTÃO DE TOGGLE DE TEMA
+   ======================================== */
+
+.theme-toggle {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.theme-toggle button {
+    padding: 12px;
+    border: 2px solid var(--color-border, #ddd);
+    background: var(--color-surface, white);
+    border-radius: 50%;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.theme-toggle button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle button:focus {
+    outline: 3px solid var(--color-accent, #f39c12);
+    outline-offset: 2px;
+}
+
+/* ========================================
+   TEXTO LEGÍVEL (WCAG AA)
+   ======================================== */
+
+/* Garante tamanho mínimo de fonte */
+body {
+    font-size: 16px; /* Mínimo WCAG */
+    line-height: 1.5; /* Mínimo WCAG: 1.5 */
+}
+
+/* Largura máxima de linha para legibilidade */
+p, li {
+    max-width: 80ch; /* ~75 caracteres por linha */
+}
+
+/* ========================================
+   VISIBILIDADE APENAS PARA LEITORES DE TELA
+   ======================================== */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.sr-only-focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: inherit;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+}
+
+/* ========================================
+   INDICADORES DE ESTADO
+   ======================================== */
+
+/* ARIA live regions */
+[aria-live] {
+    position: relative;
+}
+
+[aria-invalid="true"] {
+    border-color: var(--color-danger, #e74c3c) !important;
+    border-width: 2px;
+}
+
+[aria-disabled="true"],
+[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ========================================
+   RESPONSIVIDADE PARA ACESSIBILIDADE
+   ======================================== */
+
+@media (max-width: 768px) {
+    .theme-toggle {
+        bottom: 16px;
+        right: 16px;
+    }
+    
+    .theme-toggle button {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
