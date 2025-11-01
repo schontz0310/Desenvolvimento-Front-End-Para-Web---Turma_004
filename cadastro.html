@@ -464,22 +464,28 @@
                     <fieldset>
                         <legend>Já foi voluntário antes?</legend>
                         
-                        <p>
-                            <input 
-                                type="radio" 
-                                id="exp-sim" 
-                                name="experiencia-voluntariado" 
-                                value="sim">
-                            <label for="exp-sim">Sim</label>
-                            &nbsp;&nbsp;&nbsp;
-                            <input 
-                                type="radio" 
-                                id="exp-nao" 
-                                name="experiencia-voluntariado" 
-                                value="nao"
-                                checked>
-                            <label for="exp-nao">Não</label>
-                        </p>
+                        <div style="display: flex; gap: 24px;">
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <input 
+                                    type="radio" 
+                                    id="exp-sim" 
+                                    name="experiencia-voluntariado" 
+                                    value="sim"
+                                    style="flex-shrink: 0;">
+                                <label for="exp-sim" style="cursor: pointer;">Sim</label>
+                            </div>
+                            
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <input 
+                                    type="radio" 
+                                    id="exp-nao" 
+                                    name="experiencia-voluntariado" 
+                                    value="nao"
+                                    checked
+                                    style="flex-shrink: 0;">
+                                <label for="exp-nao" style="cursor: pointer;">Não</label>
+                            </div>
+                        </div>
                     </fieldset>
                     
                     <p>
