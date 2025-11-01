@@ -644,5 +644,108 @@
             </div>
         </div>
     </footer>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Modal de Informações -->
+    <div class="modal" id="infoModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Informações sobre Voluntariado</h3>
+                <button class="modal-close" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Processo de Seleção:</strong></p>
+                <ol>
+                    <li>Preencha o formulário de cadastro</li>
+                    <li>Aguarde análise (até 5 dias úteis)</li>
+                    <li>Participe de entrevista online ou presencial</li>
+                    <li>Faça orientação inicial (4 horas)</li>
+                    <li>Comece a atuar como voluntário!</li>
+                </ol>
+                <p style="margin-top: 16px;"><strong>Dúvidas?</strong> Entre em contato: voluntarios@esperancasolidaria.org.br</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="closeModal()">Entendi</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Função para mostrar toast
+        function showToast(type, message) {
+            const container = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+            toast.className = `toast toast-${type}`;
+            toast.innerHTML = `
+                <div class="toast-content">
+                    <div class="toast-message">${message}</div>
+                </div>
+                <button class="toast-close" onclick="this.parentElement.remove()">×</button>
+            `;
+            container.appendChild(toast);
+            
+            setTimeout(() => toast.classList.add('show'), 10);
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => toast.remove(), 300);
+            }, 5000);
+        }
+
+        // Abrir/Fechar Modal
+        function openModal() {
+            document.getElementById('infoModal').classList.add('active');
+        }
+        
+        function closeModal() {
+            document.getElementById('infoModal').classList.remove('active');
+        }
+
+        // Fechar modal ao clicar no backdrop
+        document.querySelector('.modal-backdrop')?.addEventListener('click', closeModal);
+
+        // Validação e Toast no envio do formulário
+        document.querySelector('form')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validação básica
+            const nome = document.getElementById('nome')?.value;
+            const email = document.getElementById('email')?.value;
+            
+            if (!nome || !email) {
+                showToast('danger', '✕ Preencha todos os campos obrigatórios!');
+                return;
+            }
+            
+            // Simular envio
+            showToast('info', 'ℹ Enviando cadastro...');
+            
+            setTimeout(() => {
+                showToast('success', '✓ Cadastro enviado com sucesso! Em breve entraremos em contato.');
+                this.reset();
+            }, 1500);
+        });
+
+        // Adicionar botão para abrir modal
+        document.addEventListener('DOMContentLoaded', function() {
+            const formSection = document.querySelector('form').parentElement;
+            const infoButton = document.createElement('button');
+            infoButton.type = 'button';
+            infoButton.className = 'btn btn-outline';
+            infoButton.innerHTML = 'ℹ Como funciona o processo?';
+            infoButton.onclick = openModal;
+            infoButton.style.marginTop = '16px';
+            
+            const sectionHeader = formSection.querySelector('.section-header');
+            if (sectionHeader) {
+                const btnContainer = document.createElement('div');
+                btnContainer.style.marginTop = '16px';
+                btnContainer.appendChild(infoButton);
+                sectionHeader.appendChild(btnContainer);
+            }
+        });
+    </script>
 </body>
 </html>
