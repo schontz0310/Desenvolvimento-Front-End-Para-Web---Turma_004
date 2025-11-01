@@ -13,7 +13,7 @@
         <input type="checkbox" id="menu-toggle" class="menu-checkbox">
         
         <div class="header-container">
-            <a href="/" data-link class="site-logo">
+            <a href="index.html" class="site-logo">
                 <img src="img/logo.png" alt="Logo ONG Esperança Solidária">
                 <div class="header-brand-name">
                     <span class="header-brand-title">ONG Esperança Solidária</span>
@@ -29,9 +29,9 @@
             
             <nav class="main-nav">
                 <ul class="nav-menu">
-                    <li class="nav-item"><a href="/" data-link class="nav-link active">Início</a></li>
-                    <li class="nav-item"><a href="/projetos" data-link class="nav-link">Projetos</a></li>
-                    <li class="nav-item"><a href="/cadastro" data-link class="nav-link">Cadastre-se</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link active">Início</a></li>
+                    <li class="nav-item"><a href="projetos.html" class="nav-link">Projetos</a></li>
+                    <li class="nav-item"><a href="cadastro.html" class="nav-link">Cadastre-se</a></li>
                 </ul>
             </nav>
         </div>
@@ -39,9 +39,9 @@
         <!-- Menu Mobile -->
         <nav class="mobile-menu">
             <ul class="mobile-nav-menu">
-                <li class="mobile-nav-item"><a href="/" data-link class="mobile-nav-link active">Início</a></li>
-                <li class="mobile-nav-item"><a href="/projetos" data-link class="mobile-nav-link">Projetos</a></li>
-                <li class="mobile-nav-item"><a href="/cadastro" data-link class="mobile-nav-link">Cadastre-se</a></li>
+                <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link active">Início</a></li>
+                <li class="mobile-nav-item"><a href="projetos.html" class="mobile-nav-link">Projetos</a></li>
+                <li class="mobile-nav-item"><a href="cadastro.html" class="mobile-nav-link">Cadastre-se</a></li>
             </ul>
         </nav>
         
@@ -49,8 +49,6 @@
     </header>
 
     <main class="site-main">
-        <!-- SEÇÃO HOME (SPA) -->
-        <div id="home-content">
         <!-- Seção Hero -->
         <section class="hero">
             <div class="container">
@@ -58,8 +56,8 @@
                     <h2 class="hero-title">Transformando Vidas, Construindo Futuros</h2>
                     <p class="hero-description">Há mais de 15 anos levando esperança e oportunidades para comunidades em situação de vulnerabilidade social.</p>
                     <div class="hero-buttons">
-                        <a href="/projetos" data-link class="btn btn-primary btn-lg">Conheça Nossos Projetos</a>
-                        <a href="/cadastro" data-link class="btn btn-outline btn-lg">Seja um Voluntário</a>
+                        <a href="projetos.html" class="btn btn-primary btn-lg">Conheça Nossos Projetos</a>
+                        <a href="cadastro.html" class="btn btn-outline btn-lg">Seja um Voluntário</a>
                     </div>
                 </div>
             </div>
@@ -217,7 +215,7 @@
                         <div class="card-body">
                             <h3 class="card-title">💰 Faça uma Doação</h3>
                             <p class="card-text">Toda contribuição faz diferença! Doe qualquer valor e ajude a manter nossos projetos funcionando.</p>
-                            <a href="/projetos" data-link class="btn btn-secondary">Doar Agora</a>
+                            <a href="projetos.html" class="btn btn-secondary">Doar Agora</a>
                         </div>
                     </div>
                     
@@ -225,7 +223,7 @@
                         <div class="card-body">
                             <h3 class="card-title">🤝 Seja Voluntário</h3>
                             <p class="card-text">Compartilhe seu tempo e conhecimento. Temos diversas oportunidades de voluntariado.</p>
-                            <a href="/cadastro" data-link class="btn btn-secondary">Cadastre-se</a>
+                            <a href="cadastro.html" class="btn btn-secondary">Cadastre-se</a>
                         </div>
                     </div>
                     
@@ -311,20 +309,6 @@
                 </div>
             </div>
         </section>
-        </div>
-        <!-- FIM SEÇÃO HOME -->
-
-        <!-- SEÇÃO PROJETOS (SPA) -->
-        <div id="projetos-content" style="display: none;">
-            <!-- Conteúdo de projetos será carregado aqui -->
-        </div>
-        <!-- FIM SEÇÃO PROJETOS -->
-
-        <!-- SEÇÃO CADASTRO (SPA) -->
-        <div id="cadastro-content" style="display: none;">
-            <!-- Conteúdo de cadastro será carregado aqui -->
-        </div>
-        <!-- FIM SEÇÃO CADASTRO -->
     </main>
 
     <footer class="site-footer">
@@ -340,9 +324,9 @@
                 <div class="footer-section">
                     <h3>Links Rápidos</h3>
                     <ul class="footer-links">
-                        <li><a href="/" data-link>Início</a></li>
-                        <li><a href="/projetos" data-link>Projetos</a></li>
-                        <li><a href="/cadastro" data-link>Cadastre-se</a></li>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                        <li><a href="cadastro.html">Cadastre-se</a></li>
                     </ul>
                 </div>
                 
@@ -358,7 +342,5 @@
         </div>
     </footer>
 
-    <!-- JavaScript Modules (SPA) -->
-    <script type="module" src="js/app.js"></script>
 </body>
 </html>

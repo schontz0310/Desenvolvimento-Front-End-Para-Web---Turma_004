@@ -703,35 +703,11 @@
         </div>
     </div>
 
+    <!-- JavaScript - Validação avançada de formulários -->
+    <script src="js/script.js"></script>
+    
     <script>
-        // Função para mostrar toast
-        function showToast(type, message) {
-            const container = document.getElementById('toastContainer');
-            const toast = document.createElement('div');
-            toast.className = `toast toast-${type}`;
-            toast.style.position = 'relative';
-            toast.style.marginBottom = '12px';
-            toast.innerHTML = `
-                <div class="toast-content">
-                    <div class="toast-message">${message}</div>
-                </div>
-                <button class="toast-close" onclick="this.parentElement.remove()">×</button>
-            `;
-            container.appendChild(toast);
-            
-            // Scroll suave para o topo quando mostrar toast de erro
-            if (type === 'danger') {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-            
-            setTimeout(() => toast.classList.add('show'), 10);
-            setTimeout(() => {
-                toast.classList.remove('show');
-                setTimeout(() => toast.remove(), 300);
-            }, 5000);
-        }
-
-        // Abrir/Fechar Modal
+        // Funções do Modal (mantidas inline para simplicidade)
         function openModal() {
             document.getElementById('infoModal').classList.add('active');
         }
@@ -739,88 +715,6 @@
         function closeModal() {
             document.getElementById('infoModal').classList.remove('active');
         }
-
-        // Inicialização quando DOM carregar
-        document.addEventListener('DOMContentLoaded', function() {
-            // Fechar modal ao clicar no backdrop
-            const backdrop = document.querySelector('.modal-backdrop');
-            if (backdrop) {
-                backdrop.addEventListener('click', closeModal);
-            }
-            
-            // Validação e Toast no envio do formulário
-            const form = document.querySelector('form');
-            if (form) {
-                // Adicionar validação em tempo real nos campos required
-                const requiredFields = form.querySelectorAll('[required]');
-                requiredFields.forEach(field => {
-                    // Remover borda vermelha quando o usuário digitar
-                    field.addEventListener('input', function() {
-                        if (this.value.trim()) {
-                            this.style.borderColor = '';
-                        }
-                    });
-                    
-                    // Validar quando perder o foco
-                    field.addEventListener('blur', function() {
-                        if (!this.value.trim()) {
-                            this.style.borderColor = '#e74c3c';
-                        }
-                    });
-                });
-                
-                form.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    
-                    // Validação completa - verificar todos os campos required
-                    let camposVazios = [];
-                    
-                    requiredFields.forEach(field => {
-                        const value = field.value.trim();
-                        if (!value) {
-                            camposVazios.push(field);
-                            // Adicionar classe de erro
-                            field.style.borderColor = '#e74c3c';
-                        } else {
-                            // Remover classe de erro se estiver preenchido
-                            field.style.borderColor = '';
-                        }
-                    });
-                    
-                    // Se houver campos vazios, mostrar erro
-                    if (camposVazios.length > 0) {
-                        showToast('danger', `✕ Preencha todos os campos obrigatórios! (${camposVazios.length} campo(s) vazio(s))`);
-                        // Focar no primeiro campo vazio
-                        camposVazios[0].focus();
-                        return false;
-                    }
-                    
-                    // Validação de e-mail
-                    const email = document.getElementById('email').value.trim();
-                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (!emailRegex.test(email)) {
-                        showToast('danger', '✕ Digite um e-mail válido!');
-                        document.getElementById('email').focus();
-                        return false;
-                    }
-                    
-                    // Simular envio
-                    showToast('info', 'ℹ Enviando cadastro...');
-                    
-                    setTimeout(() => {
-                        showToast('success', '✓ Cadastro enviado com sucesso! Em breve entraremos em contato.');
-                        form.reset();
-                        // Remover bordas de erro
-                        requiredFields.forEach(field => {
-                            field.style.borderColor = '';
-                        });
-                    }, 1500);
-                    
-                    return false;
-                });
-            }
-        });
 
         // Adicionar botão para abrir modal
         document.addEventListener('DOMContentLoaded', function() {
@@ -838,6 +732,12 @@
                 btnContainer.style.marginTop = '16px';
                 btnContainer.appendChild(infoButton);
                 sectionHeader.appendChild(btnContainer);
+            }
+            
+            // Fechar modal ao clicar no backdrop
+            const backdrop = document.querySelector('.modal-backdrop');
+            if (backdrop) {
+                backdrop.addEventListener('click', closeModal);
             }
         });
     </script>
